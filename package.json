@@ -1,0 +1,28 @@
+{
+  "name": "fake-mysql",
+  "version": "1.0.0",
+  "description": "generate test data for mysql",
+  "bin": {
+    "fakemysql": "./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jon-Millent/fake-mysql.git"
+  },
+  "keywords": [
+    "fake",
+    "mysql"
+  ],
+  "author": "jon-millent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jon-Millent/fake-mysql/issues"
+  },
+  "homepage": "https://github.com/Jon-Millent/fake-mysql#readme",
+  "dependencies": {
+    "chance": "^1.1.6",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.15",
+    "mysql2": "^2.1.0"
+  }
+}
