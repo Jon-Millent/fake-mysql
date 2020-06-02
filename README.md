@@ -8,9 +8,14 @@ npm install fake-mysql -g
 ```
 
 ## Use
-传入你配置文件的相对路径，或者绝对路径
 ```shell script
 fakemysql ./config.js
+```
+output
+```shell script
+Records: 10  Duplicates: 0  Warnings: 10
+Records: 20  Duplicates: 0  Warnings: 0
+ok 56ms
 ```
 
 ## Test
