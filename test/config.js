@@ -7,7 +7,7 @@ module.exports = {
     local: 'zh_CN',
     port: '3306',
 
-    mode: 'dev',
+    mode: 'pord',
 
     tables: [
         {
@@ -39,21 +39,17 @@ module.exports = {
                 ip: 'internet.ip',
                 school: 'attach.school',
                 address: 'address.city',
-                create_time: 'attach.datetime',
-                content: {
-                    type: 'custom.content',
-                    filter(){
-                        return '123456789'
-                    }
-                },
-                news: {
-                    type: 'attach.string',
-                    min: 100,
-                    max: 200
-                },
-                avatar: 'attach.avatar',
-                music: 'attach.music',
-                qrcode: 'attach.qrcode',
+                create_time: 'attach.datetime'
+            }
+        },
+        {
+            name: 'todo',
+            length: 20,
+            data: {
+                name: 'attach.name',
+                openid: 'attach.openid',
+                qq: 'attach.qq',
+                todo_time: 'attach.datetime'
             }
         }
     ]
