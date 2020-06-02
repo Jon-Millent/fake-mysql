@@ -101,9 +101,6 @@ class Mock {
                     if(typeof target.min === 'number') {
                         f.min = target.min
                     }
-                    if(typeof target.fixed === 'number') {
-                        f.fixed = target.fixed
-                    }
                     outputString = chance.integer(f)
                 } else {
                     outputString = chance.integer({min: 17, max: 28})
@@ -140,6 +137,9 @@ class Mock {
             case 'attach.year':
                 outputString = Attach.datetime('YYYY')
                 break
+            case 'attach.timestamp':
+                outputString = Attach.datetime('yyyymmddhhmmss')
+                break
             case 'attach.avatar':
                 outputString = Attach.avatar()
                 break
@@ -163,7 +163,7 @@ class Mock {
             // 用户自定义
 
             if(typeof target.maxLength === 'number') {
-                outputString = outputString.substr(0, target.maxLength)
+                outputString = outputString.toString().substr(0, target.maxLength)
             }
 
             if(typeof target.required === 'boolean' && target.required === false) {
