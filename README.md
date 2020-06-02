@@ -13,6 +13,9 @@ npm install fake-mysql -g
 fakemysql ./config.js
 ```
 
+## Test
+见 `/test/config.js`
+
 ## config
 config基础参数
 ```javascript
@@ -233,7 +236,7 @@ module.exports = {
           type: 'attach.name', // 类型
           maxLength: 20, // 最长限制
           required: true, // 是否必须返回，默认为true，为false时此字段有50%的几率为空
-          filter(target){ // 自定义过滤器，你可以在参数返回对该参数处理
+          filter(target){ // 自定义过滤器，你可以在参数返回对该参数处理，通过过滤器，你可以实现更多高级用法
               return target + '你好'
           }
         },
@@ -528,6 +531,35 @@ module.exports = {
   * directoryPath
   * filePath
   * semver
+
+### 过滤器
+通过过滤器，你可以实现更多用法
+
+#### 例1.自定义输出字段
+```javascript
+// 自定义输出时间戳
+...
+my_time: {
+    type: 'custom.my_time',
+    filter(target){
+        return new Date().getTime()
+    }
+}
+...
+```
+#### 例2.自定义引入模块参与处理
+```javascript
+const dayjs = require('dayjs')
+// 自定义输出日期
+...
+my_year: {
+    type: 'custom.my_year',
+    filter(target){
+        return dayjs().year()
+    }
+}
+...
+```
 
 ## LICENSE
 <a href="http://opensource.org/licenses/MIT">MIT<a>
