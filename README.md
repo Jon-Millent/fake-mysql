@@ -8,12 +8,13 @@ npm install fake-mysql -g
 ```
 
 ## Use
-
+传入你配置文件的相对路径，或者绝对路径
 ```shell script
 fakemysql ./config.js
 ```
 
 ## config
+config基础参数
 ```javascript
 module.exports = {
     host: 'localhost', //数据库 host
@@ -66,7 +67,7 @@ module.exports = {
         <td>默认值</td>
     </tr>
     <tr>
-        <td>数据本地化</td>
+        <td>数据本地化，会影响参数的输出格式</td>
         <td>见下</td>
         <td>zh_CN</td>
     </tr>
