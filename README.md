@@ -541,7 +541,7 @@ module.exports = {
 ...
 my_time: {
     type: 'custom.my_time',
-    filter(target){
+    filter(){
         return new Date().getTime()
     }
 }
@@ -554,7 +554,7 @@ const dayjs = require('dayjs')
 ...
 my_year: {
     type: 'custom.my_year',
-    filter(target){
+    filter(){
         return dayjs().year()
     }
 }
