@@ -207,7 +207,7 @@ module.exports = {
       name: 'xxxx',
       length: 20,
       data: {
-        age: 'attach.name',
+        username: 'attach.name',
       }
     ]
     ...
@@ -221,7 +221,7 @@ module.exports = {
       name: 'xxxx',
       length: 20,
       data: {
-        age: {
+        username: {
           type: 'attach.name',
         },
       }
@@ -237,7 +237,7 @@ module.exports = {
       name: 'xxxx',
       length: 20,
       data: {
-        age: {
+        username: {
           type: 'attach.name', // 类型
           maxLength: 20, // 最长限制
           required: true, // 是否必须返回，默认为true，为false时此字段有50%的几率为空
@@ -293,7 +293,7 @@ module.exports = {
   ```javascript
   参数拓展
   xxxx: {
-      type: 'attach.string',
+      type: 'attach.age',
       min: 50, // 最小年龄
       max: 80, // 最大年龄
   }
@@ -340,7 +340,8 @@ module.exports = {
   
   
 ### faker
-来自依赖库 `faker.js` 提供的字段，支持本地化，请根据自己需要使用，如果使用的时候有问题，请提 `issue`
+来自依赖库 `faker.js` 提供的字段，支持本地化，请根据自己需要使用，如果使用的时候有问题，请提 `issue`  
+
 使用示例
 ```javascript
 module.exports = {
@@ -349,7 +350,7 @@ module.exports = {
       name: 'xxxx',
       length: 20,
       data: {
-        age: 'address.zipCode',
+        zipCode: 'address.zipCode',
       }
     ]
     ...
