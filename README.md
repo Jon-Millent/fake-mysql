@@ -232,7 +232,7 @@ module.exports = {
         age: {
           type: 'attach.name', // 类型
           maxLength: 20, // 最长限制
-          required: true, // 是否必须返回，默认为false，为true此字段有50%的几率为空
+          required: true, // 是否必须返回，默认为true，为false时此字段有50%的几率为空
           filter(target){ // 自定义过滤器，你可以在参数返回对该参数处理
               return target + '你好'
           }
