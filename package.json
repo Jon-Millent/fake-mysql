@@ -21,8 +21,8 @@
   "homepage": "https://github.com/Jon-Millent/fake-mysql#readme",
   "dependencies": {
     "chance": "^1.1.6",
+    "dayjs": "^1.8.28",
     "faker": "^4.1.0",
-    "lodash": "^4.17.15",
     "mysql2": "^2.1.0"
   }
 }

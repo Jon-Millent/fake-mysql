@@ -20,6 +20,11 @@ chance@^1.1.6:
   resolved "https://registry.npmjs.org/chance/-/chance-1.1.6.tgz#967a0a129e0f342f7c65cd5d20f5ae870a26b8af"
   integrity sha512-DXLzaGjasDWbvlFAJyQBIwlzdQZuPdz4of9TTTxmHTjja88ZU/vBwUwxxjalSt43zWTPrhiJT0z0N4bZqfZS9w==
 
+dayjs@^1.8.28:
+  version "1.8.28"
+  resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.8.28.tgz#37aa6201df483d089645cb6c8f6cef6f0c4dbc07"
+  integrity sha512-ccnYgKC0/hPSGXxj7Ju6AV/BP4HUkXC2u15mikXT5mX9YorEaoi1bEKOmAqdkJHN4EEkmAf97SpH66Try5Mbeg==
+
 denque@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmjs.org/denque/-/denque-1.4.1.tgz#6744ff7641c148c3f8a69c307e51235c1f4a37cf"

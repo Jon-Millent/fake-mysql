@@ -62,7 +62,9 @@ async function main (){
         timezone: userConfig.timezone
     })
 
-    await mySql.createConnection()
+    if(userConfig.mode === 'pord') {
+        await mySql.createConnection()
+    }
 
     let myMock = new Mock({
         local: userConfig.local
@@ -80,20 +82,30 @@ async function main (){
             renderInfo.data.push(obj)
         }
 
-        let result = await mySql.create(renderInfo)
+        if(userConfig.mode === 'pord') {
+            let result = await mySql.create(renderInfo)
 
-        if(result.code === 200) {
-            console.log(result.results.info)
+            if(result.code === 200) {
+                console.log(result.results.info)
+            } else {
+                console.log(result.err)
+            }
         } else {
-            console.log(result.fields)
+            console.log(renderInfo)
         }
+
     }
 
     console.log('ok ' + (new Date().getTime() - startTime) + 'ms')
-    mySql.closeSql()
+
+    if(userConfig.mode === 'pord') {
+        mySql.closeSql()
+    }
 
     process.on('SIGINT', function () {
-        mySql.closeSql()
+        if(userConfig.mode === 'pord') {
+            mySql.closeSql()
+        }
         process.exit();
     });
 
