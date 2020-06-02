@@ -360,7 +360,7 @@ module.exports = {
       data: {
         zipCode: {
           type: 'address.zipCode',
-          target(target) {
+          filter(target) {
             return target + ';'
           }
         },
