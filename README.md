@@ -1,6 +1,8 @@
 # fake-mysql
 generate test data for mysql
 
+![version](https://img.shields.io/github/package-json/v/jon-millent/fake-mysql.svg)
+
 ## Install
 
 ```shell script
